@@ -21,11 +21,6 @@ COPY index.html /opt/MusicIP/MusicMagicMixer/server/index.html
 #   when restarting
 RUN sed -i -e 's/tivo=1/tivo=0/' -e 's_cache=.*_cache=/config/default.m3lib_' /opt/MusicIP/MusicMagicMixer/mmm.ini
 
-# Create .MusicMagic folder in musicip home folder and copy mmm.ini there.
-# MusicIP expect to find that file there.
-RUN mkdir -p /home/musicip/.MusicMagic && \
-    cp /opt/MusicIP/MusicMagicMixer/mmm.ini /home/musicip/.MusicMagic
-
 VOLUME /music /config
 EXPOSE 10002
 
