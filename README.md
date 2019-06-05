@@ -45,4 +45,4 @@ services:
 | -e TZ=America/Toronto       | Specify your timezone.                           |
 | -v \<path to music\>:/music | Specify where your music files resides.          |
 | -v \<path to data\>:/config | Specify where the MusicIP library will be saved. |
-  ```
+
